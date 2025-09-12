@@ -1,0 +1,9 @@
+odoo/
+__pycache__/
+*.pyc
+*.log
+*.db
+*.egg-info
+venv/
+.env
+
