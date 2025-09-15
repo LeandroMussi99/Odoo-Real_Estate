@@ -1,4 +1,14 @@
+# Ignorar todo el core de Odoo
 odoo/
+
+# Pero incluir explícitamente tu módulo
+!odoo/custom/
+!odoo/custom/src/
+!odoo/custom/src/unla-desarrollos/
+!odoo/custom/src/unla-desarrollos/real_estate/
+!odoo/custom/src/unla-desarrollos/real_estate/**
+
+# Archivos y carpetas innecesarias
 __pycache__/
 *.pyc
 *.log
