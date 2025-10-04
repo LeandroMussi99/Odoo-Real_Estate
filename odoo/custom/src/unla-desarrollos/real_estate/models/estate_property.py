@@ -41,3 +41,36 @@ class EstateProperty(models.Model):
         default="nuevo",
         copy=False
     )
+
+        # 🔹 Many2one - Tipo Propiedad
+    property_type_id = fields.Many2one(
+        "estate.property.type",
+        string="Tipo Propiedad"
+    )
+
+    # 🔹 Many2one - Comprador (res.partner)
+    buyer_id = fields.Many2one(
+        "res.partner",
+        string="Comprador"
+    )
+
+    # 🔹 Many2one - Vendedor (res.users)
+    salesman_id = fields.Many2one(
+        "res.users",
+        string="Vendedor",
+        default=lambda self: self.env.user,  # usuario logueado
+        copy=False  # no copiar al duplicar registro
+    )
+
+    # 🔹 Many2many - Etiquetas
+    tag_ids = fields.Many2many(
+        comodel_name="estate.property.tag",
+        string="Etiquetas",
+    )
+
+    offer_ids = fields.One2many(
+    comodel_name="estate.property.offer",
+    inverse_name="property_id",
+    string="Ofertas",
+    )
+
