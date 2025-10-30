@@ -7,6 +7,8 @@ odoo/
 !odoo/custom/src/unla-desarrollos/
 !odoo/custom/src/unla-desarrollos/real_estate/
 !odoo/custom/src/unla-desarrollos/real_estate/**
+!odoo/custom/src/unla-desarrollos/sale_channel_management/
+!odoo/custom/src/unla-desarrollos/sale_channel_management/**
 
 # Archivos y carpetas innecesarias
 __pycache__/
